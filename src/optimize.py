@@ -55,6 +55,13 @@ def optimize_models():
     xgb_search.fit(X, y)
     print(f"Best XGB Params: {xgb_search.best_params_}")
     print(f"Best XGB Score: {xgb_search.best_score_:.4f}")
+    
+    # Save best params to file
+    with open('models/best_params.txt', 'w') as f:
+        f.write(f"Random Forest Best Params: {rf_search.best_params_}\n")
+        f.write(f"XGBoost Best Params: {xgb_search.best_params_}\n")
+        f.write(f"Best RF Score: {rf_search.best_score_}\n")
+        f.write(f"Best XGB Score: {xgb_search.best_score_}\n")
 
 if __name__ == "__main__":
     optimize_models()

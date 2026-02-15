@@ -22,9 +22,9 @@ def train_and_evaluate():
     
     # Models to test
     models = {
-        'LogisticRegression': LogisticRegression(max_iter=1000, random_state=42),
-        'RandomForest': RandomForestClassifier(n_estimators=100, random_state=42),
-        'XGBoost': XGBClassifier(use_label_encoder=False, eval_metric='logloss', random_state=42)
+        'LogisticRegression': LogisticRegression(max_iter=1000, C=0.1, random_state=42),
+        'RandomForest': RandomForestClassifier(n_estimators=200, min_samples_split=10, min_samples_leaf=1, max_depth=10, bootstrap=True, random_state=42),
+        'XGBoost': XGBClassifier(use_label_encoder=False, eval_metric='logloss', n_estimators=500, learning_rate=0.01, max_depth=7, subsample=0.8, colsample_bytree=0.8, gamma=0.2, random_state=42)
     }
     
     results = {}

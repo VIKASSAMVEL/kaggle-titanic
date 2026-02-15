@@ -1,0 +1,4 @@
+Random Forest Best Params: {'classifier__n_estimators': 200, 'classifier__min_samples_split': 10, 'classifier__min_samples_leaf': 1, 'classifier__max_depth': 10, 'classifier__bootstrap': True}
+XGBoost Best Params: {'classifier__subsample': 0.8, 'classifier__n_estimators': 500, 'classifier__max_depth': 7, 'classifier__learning_rate': 0.01, 'classifier__gamma': 0.2, 'classifier__colsample_bytree': 0.8}
+Best RF Score: 0.8361182599962337
+Best XGB Score: 0.8507187244994036
